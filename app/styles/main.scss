@@ -1,0 +1,300 @@
+$ndp-color: #FF9900;
+$lib-color: #B8052C;
+$pc-color: #004A92;
+$grn-color: #8CC542;
+$ind-color: #aaaaaa;
+$slide-time: 500ms;
+$party-font-color: #ffffff;
+$bar-background:#cccccc;
+$control-active-background-color:#1d78af;
+$control-background-color:$bar-background;
+
+
+
+.sliderContainer ul.slider {
+  list-style: none;
+}
+
+.sliderContainer ul.slider > li.slide .story-content {
+  padding: 0 4em;
+}
+
+.sliderContainer ul.slider > li.slide .story-content ol {
+  list-style: none;
+}
+
+.sliderContainer ul.slider > li.slide .story-content ol li {
+  margin: .25em 0;
+  padding: .25em;
+  position: relative;
+}
+
+.sliderContainer ul.slider > li.slide .story-content ol li span.bar {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.sliderContainer ul.slider > li.slide {
+  min-height: 200px;
+}
+
+.sliderContainer ul.slider > li.slide li {
+  background-color: $bar-background;
+}
+
+.sliderContainer ul.slider > li.slide .story-content ol li span.bar.NDP {
+  background: #aaa url('http://static.globalnews.ca/content/election/img/fadedBackground-v1.png') repeat 0 0;
+  background-color: $ndp-color;
+}
+
+.sliderContainer ul.slider > li.slide .story-content ol li span.bar.LIB {
+  background: #aaa url('http://static.globalnews.ca/content/election/img/fadedBackground-v1.png') repeat 0 0;
+  background-color: $lib-color;
+}
+
+.sliderContainer ul.slider > li.slide .story-content ol li span.bar.PC {
+  background: #aaa url('http://static.globalnews.ca/content/election/img/fadedBackground-v1.png') repeat 0 0;
+  background-color: $pc-color;
+}
+
+.sliderContainer ul.slider > li.slide .story-content ol li span.bar.GRN {
+  background: #aaa url('http://static.globalnews.ca/content/election/img/fadedBackground-v1.png') repeat 0 0;
+  background-color: $grn-color;
+}
+
+.sliderContainer ul.slider > li.slide .story-content ol li span.bar.IND {
+  background: #aaa url('http://static.globalnews.ca/content/election/img/fadedBackground-v1.png') repeat 0 0;
+  background-color: $ind-color;
+}
+
+.sliderContainer ul.slider > li.slide li h4 {
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  color: $party-font-color;
+  position: relative;
+  z-index: 99;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.sliderContainer ul.slider > li.slide li h4.winner {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.sliderContainer a.slider-control {
+  position: absolute;
+  top: 45%;
+  margin-top: -25px;
+  width: .75em;
+  color: white;
+  background-color: $control-background-color;
+  background-color: rgba($control-background-color, .7);
+  z-index: 10;
+  text-align: center;
+  font-size: 4em;
+}
+
+.sliderContainer a.slider-control:hover,
+.sliderContainer a.slider-control:focus {
+  background-color: $control-active-background-color;
+  background-color: rgba($control-active-background-color, .7);
+}
+
+.sliderContainer ul.slider > li a.read-more {
+  float: right;
+}
+
+.sliderContainer ul.slider > li a.read-more:before {
+  content: '> ';
+}
+
+.sliderContainer ul.slider > li a.read-more:focus,
+.sliderContainer ul.slider > li a.read-more:hover {
+  text-decoration: underline;
+}
+
+.sliderContainer ul.slider > li img {
+  display: block;
+  width: 100%;
+}
+
+.sliderContainer a.slider-control i {
+
+}
+
+.sliderContainer ul.slider > li .slide h3 {
+  color: white;
+  font-size: 19px;
+  font-family: 'Gotham A', 'Gotham B', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+.sliderContainer ul.slider > li .slide p {
+  color: white;
+  font-size: 14px;
+  font-family: 'Gotham SSm A', 'Gotham SSm B', Arial, Helvetica, sans-serif;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sliderContainer ul.slider > li .slide a.read-more {
+  font-size: 14px;
+  color: white;
+}
+
+.sliderContainer a.slider-control.prev {
+  left: 0;
+  text-shadow: 1px 2px 1px #aaa;
+}
+
+.sliderContainer a.slider-control.next {
+  right: 0;
+  text-shadow: -1px 2px 1px #aaa;
+}
+
+.sliderContainer ul.slider > li.animate-out h3 {
+  margin-top: 0;
+}
+
+.sliderContainer {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  background: none;
+}
+
+.sliderContainer ul.slider {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -webkit-transform: translateZ(0);
+}
+
+.sliderContainer ul.slider img {
+  display: block;
+  max-width: 100%;
+}
+
+.sliderContainer ul.slider.swipe-next > li {
+  -ms-transform: translate(100%, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -o-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+
+.sliderContainer ul.slider.swipe-next > li.animate-in {
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition-duration: $slide-time;
+}
+
+.sliderContainer ul.slider.swipe-next > li.animate-out {
+  -ms-transform: translate(-100%, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -moz-transform: translate3d(-100%, 0, 0);
+  -o-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  transition-duration: $slide-time;
+}
+
+.sliderContainer ul.slider.swipe-prev > li {
+  -ms-transform: translate(-100%, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -moz-transform: translate3d(-100%, 0, 0);
+  -o-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+
+.sliderContainer ul.slider.swipe-prev > li.animate-in {
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition-duration: $slide-time;
+}
+
+.sliderContainer ul.slider.swipe-prev > li.animate-out {
+  -ms-transform: translate(100%, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -o-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  transition-duration: $slide-time;
+}
+
+.sliderContainer ul.slider > li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -ms-transform: translate(100%, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -o-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+
+.sliderContainer ul.slider > li > a {
+  display: block;
+}
+
+.sliderContainer ul.slider > li.active {
+  opacity: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.meta-bar-time-group .meta-bar-slide-index {
+  color: #999;
+  margin-right: 4em;
+  float: right;
+  padding: 7px 6px 6px;
+}
+
+ul.inline-block{
+  list-style: none;
+  li{display:inline-block;width:18%;}
+  span.bar{width:100%;display:block;color:$party-font-color;padding: .25em;}
+  span.bar.NDP {
+    background: #aaa url('http://static.globalnews.ca/content/election/img/fadedBackground-v1.png') repeat 0 0;
+    background-color: $ndp-color;
+  }
+
+  span.bar.LIB {
+    background: #aaa url('http://static.globalnews.ca/content/election/img/fadedBackground-v1.png') repeat 0 0;
+    background-color: $lib-color;
+  }
+
+  span.bar.PC {
+    background: #aaa url('http://static.globalnews.ca/content/election/img/fadedBackground-v1.png') repeat 0 0;
+    background-color: $pc-color;
+  }
+
+  span.bar.GRN {
+    background: #aaa url('http://static.globalnews.ca/content/election/img/fadedBackground-v1.png') repeat 0 0;
+    background-color: $grn-color;
+  }
+
+  span.bar.IND {
+    background: #aaa url('http://static.globalnews.ca/content/election/img/fadedBackground-v1.png') repeat 0 0;
+    background-color: $ind-color;
+  }
+}
